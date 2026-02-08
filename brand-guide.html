@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WeSense Brand Guide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #1A1A18;
+    background: #FAFAF5;
+    line-height: 1.6;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 48px 52px;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  /* Header / Title */
+  .brand-header {
+    text-align: center;
+    padding: 60px 0 40px;
+    border-bottom: 3px solid #2D6A4F;
+    margin-bottom: 40px;
+  }
+
+  .brand-header h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+
+  .brand-header h1 .we { color: #2D6A4F; }
+  .brand-header h1 .dot-earth { color: #8D8478; font-weight: 400; }
+
+  .brand-header .tagline {
+    font-size: 18px;
+    color: #8D8478;
+    font-style: italic;
+    margin-bottom: 6px;
+  }
+
+  .brand-header .subtitle {
+    font-size: 13px;
+    color: #C7C1B7;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 16px;
+  }
+
+  /* Section headings */
+  h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1B4332;
+    margin-bottom: 6px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #B7E4C7;
+  }
+
+  h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #2D6A4F;
+    margin-top: 28px;
+    margin-bottom: 10px;
+  }
+
+  .section-desc {
+    font-size: 14px;
+    color: #8D8478;
+    margin-bottom: 20px;
+    max-width: 600px;
+  }
+
+  /* Colour swatch row */
+  .palette-group {
+    margin-bottom: 32px;
+  }
+
+  .swatch-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 16px;
+  }
+
+  .swatch-box {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .swatch-info {
+    flex: 1;
+  }
+
+  .swatch-name {
+    font-weight: 600;
+    font-size: 15px;
+    color: #1A1A18;
+  }
+
+  .swatch-hex {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: #3D3D38;
+    background: #E8E4DD;
+    padding: 1px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 2px;
+  }
+
+  .swatch-usage {
+    font-size: 12.5px;
+    color: #8D8478;
+    margin-top: 2px;
+  }
+
+  /* Inline swatches (for semantic / dark mode tables) */
+  .inline-swatch {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+
+  /* Palette strip — horizontal colour bar */
+  .palette-strip {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 48px;
+    margin-bottom: 28px;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .palette-strip .strip-block {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .palette-strip .strip-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 13.5px;
+  }
+
+  th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #8D8478;
+    padding: 8px 12px;
+    border-bottom: 2px solid #E8E4DD;
+  }
+
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #E8E4DD;
+    vertical-align: middle;
+  }
+
+  /* Personality table */
+  .personality-table td:first-child {
+    font-weight: 600;
+    color: #2D6A4F;
+    width: 120px;
+  }
+
+  .personality-table td:last-child {
+    color: #8D8478;
+    font-style: italic;
+  }
+
+  /* Dark mode comparison */
+  .darkmode-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+  }
+
+  .mode-card {
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .mode-card.light {
+    background: #FAFAF5;
+  }
+
+  .mode-card.dark {
+    background: #1A1A18;
+  }
+
+  .mode-card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .mode-card.light h4 { color: #1A1A18; }
+  .mode-card.dark h4 { color: #E8E4DD; }
+
+  .mode-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 12.5px;
+  }
+
+  .mode-swatch {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    border: 1px solid rgba(128,128,128,0.2);
+  }
+
+  .mode-card.light .mode-label { color: #3D3D38; }
+  .mode-card.dark .mode-label { color: #C7C1B7; }
+  .mode-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #8D8478;
+  }
+
+  /* Typography specimen */
+  .type-specimen {
+    background: #E8E4DD;
+    border-radius: 12px;
+    padding: 28px;
+    margin: 16px 0 24px;
+  }
+
+  .type-sample {
+    margin-bottom: 16px;
+  }
+
+  .type-sample:last-child { margin-bottom: 0; }
+
+  .type-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #8D8478;
+    margin-bottom: 4px;
+  }
+
+  .type-sample-heading {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    color: #1A1A18;
+  }
+
+  .type-sample-body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #3D3D38;
+  }
+
+  .type-sample-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    color: #3D7A7A;
+  }
+
+  /* Wordmark demo */
+  .wordmark-demo {
+    display: flex;
+    gap: 20px;
+    margin: 16px 0 24px;
+  }
+
+  .wordmark-box {
+    flex: 1;
+    padding: 28px;
+    border-radius: 12px;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 28px;
+  }
+
+  .wordmark-box.on-light {
+    background: #FAFAF5;
+    border: 1px solid #E8E4DD;
+  }
+
+  .wordmark-box.on-dark {
+    background: #1A1A18;
+  }
+
+  /* Tone of voice */
+  .tone-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+  }
+
+  .tone-card {
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 13px;
+  }
+
+  .tone-card.do {
+    background: #E8F5EE;
+    border: 1px solid #B7E4C7;
+  }
+
+  .tone-card.dont {
+    background: #fdf0f0;
+    border: 1px solid #e8c4c4;
+  }
+
+  .tone-card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .tone-card.do h4 { color: #2D6A4F; }
+  .tone-card.dont h4 { color: #B33A3A; }
+
+  .tone-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .tone-card li {
+    padding: 3px 0;
+    color: #3D3D38;
+  }
+
+  .tone-card li::before {
+    margin-right: 6px;
+    font-weight: 700;
+  }
+
+  .tone-card.do li::before { content: "✓"; color: #52B788; }
+  .tone-card.dont li::before { content: "✗"; color: #B33A3A; }
+
+  /* Semantic colours row */
+  .semantic-row {
+    display: flex;
+    gap: 16px;
+    margin: 16px 0 28px;
+  }
+
+  .semantic-card {
+    flex: 1;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .semantic-card .big-swatch {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    margin: 0 auto 10px;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .semantic-card .sem-label {
+    font-weight: 600;
+    font-size: 13px;
+    color: #1A1A18;
+  }
+
+  .semantic-card .sem-hex {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #8D8478;
+  }
+
+  /* Quick reference footer */
+  .quick-ref {
+    background: #1B4332;
+    color: #E8E4DD;
+    border-radius: 12px;
+    padding: 28px;
+    margin-top: 28px;
+  }
+
+  .quick-ref h3 {
+    color: #52B788;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+
+  .quick-ref table {
+    margin-bottom: 0;
+  }
+
+  .quick-ref th {
+    color: #7FB8B2;
+    border-bottom-color: #2D6A4F;
+  }
+
+  .quick-ref td {
+    color: #E8E4DD;
+    border-bottom-color: rgba(255,255,255,0.08);
+  }
+
+  .quick-ref .swatch-hex {
+    background: rgba(255,255,255,0.1);
+    color: #B7E4C7;
+  }
+
+  /* CSS snippet */
+  .css-block {
+    background: #1E3A3A;
+    color: #B7E4C7;
+    border-radius: 10px;
+    padding: 20px 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    line-height: 1.7;
+    overflow-x: auto;
+    margin: 12px 0 20px;
+  }
+
+  .css-block .comment { color: #7FB8B2; }
+  .css-block .prop { color: #F2CC8F; }
+  .css-block .val { color: #E8E4DD; }
+
+  /* Icon guidelines */
+  .icon-guidelines {
+    display: flex;
+    gap: 20px;
+    margin: 12px 0 20px;
+  }
+
+  .icon-guideline-card {
+    flex: 1;
+    background: #E8F5EE;
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 13px;
+    color: #3D3D38;
+  }
+
+  .icon-guideline-card strong {
+    display: block;
+    color: #2D6A4F;
+    margin-bottom: 4px;
+    font-size: 12px;
+  }
+
+  /* Data viz temperature strip — two-column layout */
+  .temp-strip-wrapper {
+    display: flex;
+    gap: 12px;
+    margin: 16px 0 20px;
+  }
+
+  .temp-strip {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #1A1A18;
+    flex: 1;
+  }
+
+  .temp-stop {
+    display: flex;
+    align-items: center;
+    padding: 2px 10px;
+    min-height: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .temp-stop:last-child { border-bottom: none; }
+
+  .temp-range {
+    width: 90px;
+    flex-shrink: 0;
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .temp-hex {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5px;
+    width: 62px;
+    flex-shrink: 0;
+  }
+
+  .temp-name {
+    font-size: 10px;
+    flex: 1;
+  }
+
+  .temp-col-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: #8D8478;
+    text-align: center;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* Metric mini scale */
+  .metric-scales-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 16px 0;
+  }
+
+  .metric-card {
+    border: 1px solid #E8E4DD;
+    border-radius: 10px;
+    padding: 16px;
+  }
+
+  .metric-card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1A1A18;
+    margin-bottom: 10px;
+  }
+
+  .metric-stop {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+
+  .metric-swatch {
+    width: 24px;
+    height: 18px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    border: 1px solid #1A1A18;
+  }
+
+  .metric-label { color: #3D3D38; }
+  .metric-range-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    color: #8D8478;
+    min-width: 60px;
+  }
+
+  /* Callout box */
+  .callout {
+    border-radius: 10px;
+    padding: 16px 20px;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 16px 0;
+  }
+
+  .callout.rule {
+    background: #E8F5EE;
+    border-left: 4px solid #2D6A4F;
+  }
+
+  .callout.rule strong { color: #1B4332; }
+
+  .callout.source {
+    background: #E8E4DD;
+    border-left: 4px solid #8D8478;
+    font-size: 12.5px;
+    color: #3D3D38;
+  }
+
+  /* Utility */
+  .mt-sm { margin-top: 12px; }
+  .mb-sm { margin-bottom: 12px; }
+
+  @media print {
+    body { background: white; }
+    .page { padding: 32px 40px; }
+    .page-break { page-break-before: always; }
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: Cover + Brand Essence + Primary Palette -->
+<div class="page">
+  <div class="brand-header">
+    <h1><span class="we">WeSense</span><span class="dot-earth">.earth</span></h1>
+    <div class="tagline">Sense Your World. Share Our Planet.</div>
+    <div class="subtitle">Brand &amp; Style Guide</div>
+  </div>
+
+  <h2>Brand Essence</h2>
+  <p class="section-desc">
+    WeSense is a community-owned environmental sensor network. The brand should feel <strong>rooted in the natural world</strong> while being <strong>trustworthy and accessible</strong>. We are grassroots scientists, not a Silicon Valley startup. The aesthetic is: <em>a field notebook meets open data</em>.
+  </p>
+
+  <h3>Brand Personality</h3>
+  <table class="personality-table">
+    <thead>
+      <tr><th>Trait</th><th>What it means</th><th>What it's not</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Grounded</td><td>Earthy, honest, rooted in real data</td><td>Not corporate or sterile</td></tr>
+      <tr><td>Open</td><td>Transparent, welcoming, community-first</td><td>Not gatekept or exclusive</td></tr>
+      <tr><td>Purposeful</td><td>Clear mission, every element has a reason</td><td>Not trendy or decorative</td></tr>
+      <tr><td>Living</td><td>Growing, adaptive, connected to nature</td><td>Not static or mechanical</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- PAGE 2: Colour Palette heading + Primary -->
+<div class="page page-break">
+  <h2>Colour Palette</h2>
+
+  <!-- Full strip -->
+  <div class="palette-strip">
+    <div class="strip-block" style="background:#1B4332;"><span class="strip-label" style="color:#B7E4C7;">#1B4332</span></div>
+    <div class="strip-block" style="background:#2D6A4F;"><span class="strip-label" style="color:#E8F5EE;">#2D6A4F</span></div>
+    <div class="strip-block" style="background:#52B788;"><span class="strip-label" style="color:#1B4332;">#52B788</span></div>
+    <div class="strip-block" style="background:#D4A017;"><span class="strip-label" style="color:#1A1A18;">#D4A017</span></div>
+    <div class="strip-block" style="background:#3D7A7A;"><span class="strip-label" style="color:#E8E4DD;">#3D7A7A</span></div>
+    <div class="strip-block" style="background:#1A1A18;"><span class="strip-label" style="color:#C7C1B7;">#1A1A18</span></div>
+    <div class="strip-block" style="background:#E8E4DD;"><span class="strip-label" style="color:#3D3D38;">#E8E4DD</span></div>
+  </div>
+
+  <h3>Primary — Canopy Green</h3>
+  <p class="section-desc">The core brand colour. Represents the natural environment, growth, and the living systems WeSense monitors.</p>
+
+  <div class="palette-group">
+    <div class="swatch-row">
+      <div class="swatch-box" style="background:#1B4332;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Deep Forest</div>
+        <span class="swatch-hex">#1B4332</span>
+        <div class="swatch-usage">Dark headers, dark mode backgrounds</div>
+      </div>
+    </div>
+    <div class="swatch-row">
+      <div class="swatch-box" style="background:#2D6A4F;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Canopy</div>
+        <span class="swatch-hex">#2D6A4F</span>
+        <div class="swatch-usage">Primary brand colour, buttons, links</div>
+      </div>
+    </div>
+    <div class="swatch-row">
+      <div class="swatch-box" style="background:#52B788;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Fern</div>
+        <span class="swatch-hex">#52B788</span>
+        <div class="swatch-usage">Hover states, highlights, success indicators</div>
+      </div>
+    </div>
+    <div class="swatch-row">
+      <div class="swatch-box" style="background:#B7E4C7;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Lichen</div>
+        <span class="swatch-hex">#B7E4C7</span>
+        <div class="swatch-usage">Light accents, tag backgrounds, subtle fills</div>
+      </div>
+    </div>
+    <div class="swatch-row">
+      <div class="swatch-box" style="background:#E8F5EE; border-color: #B7E4C7;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Morning Dew</div>
+        <span class="swatch-hex">#E8F5EE</span>
+        <div class="swatch-usage">Tinted backgrounds, light mode surfaces</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 3: Secondary + Tertiary -->
+<div class="page page-break">
+  <h3>Secondary — Warm Amber</h3>
+  <p class="section-desc">A warm counterpoint that evokes sunlight, community warmth, and the analogue world. Used sparingly for emphasis.</p>
+
+  <div class="palette-group">
+    <div class="swatch-row">
+      <div class="swatch-box" style="background:#8B6914;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Dark Honey</div>
+        <span class="swatch-hex">#8B6914</span>
+        <div class="swatch-usage">Amber text on light backgrounds</div>
+      </div>
+    </div>
+    <div class="swatch-row">
+      <div class="swatch-box" style="background:#D4A017;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Amber</div>
+        <span class="swatch-hex">#D4A017</span>
+        <div class="swatch-usage">Call-to-action accents, badges, highlights</div>
+      </div>
+    </div>
+    <div class="swatch-row">
+      <div class="swatch-box" style="background:#F2CC8F;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Golden Haze</div>
+        <span class="swatch-hex">#F2CC8F</span>
+        <div class="swatch-usage">Subtle warm backgrounds, notification banners</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Tertiary — Slate Teal</h3>
+  <p class="section-desc">A cooler, muted tone for data-heavy contexts like the Respiro map, charts, and technical UI.</p>
+
+  <div class="palette-group">
+    <div class="swatch-row">
+      <div class="swatch-box" style="background:#1E3A3A;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Deep Teal</div>
+        <span class="swatch-hex">#1E3A3A</span>
+        <div class="swatch-usage">Data viz dark range, code blocks</div>
+      </div>
+    </div>
+    <div class="swatch-row">
+      <div class="swatch-box" style="background:#3D7A7A;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Slate Teal</div>
+        <span class="swatch-hex">#3D7A7A</span>
+        <div class="swatch-usage">Secondary links, map overlays, info elements</div>
+      </div>
+    </div>
+    <div class="swatch-row">
+      <div class="swatch-box" style="background:#7FB8B2;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Seafoam</div>
+        <span class="swatch-hex">#7FB8B2</span>
+        <div class="swatch-usage">Chart lines, tertiary accents</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 4: Neutrals + Semantic -->
+<div class="page page-break">
+  <h3 style="margin-top:0;">Neutrals — Warm Stone</h3>
+  <p class="section-desc">All neutrals carry a slight warm undertone to avoid a cold, corporate feel.</p>
+
+  <div class="palette-group">
+    <div class="swatch-row">
+      <div class="swatch-box" style="background:#1A1A18;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Charcoal</div>
+        <span class="swatch-hex">#1A1A18</span>
+        <div class="swatch-usage">Headings, high-emphasis text</div>
+      </div>
+    </div>
+    <div class="swatch-row">
+      <div class="swatch-box" style="background:#3D3D38;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Dark Stone</div>
+        <span class="swatch-hex">#3D3D38</span>
+        <div class="swatch-usage">Body text, dark mode surfaces</div>
+      </div>
+    </div>
+    <div class="swatch-row">
+      <div class="swatch-box" style="background:#8D8478;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Warm Grey</div>
+        <span class="swatch-hex">#8D8478</span>
+        <div class="swatch-usage">Muted text, captions, placeholders</div>
+      </div>
+    </div>
+    <div class="swatch-row">
+      <div class="swatch-box" style="background:#C7C1B7;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Pebble</div>
+        <span class="swatch-hex">#C7C1B7</span>
+        <div class="swatch-usage">Borders, dividers</div>
+      </div>
+    </div>
+    <div class="swatch-row">
+      <div class="swatch-box" style="background:#E8E4DD;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Light Stone</div>
+        <span class="swatch-hex">#E8E4DD</span>
+        <div class="swatch-usage">Card backgrounds, surfaces</div>
+      </div>
+    </div>
+    <div class="swatch-row">
+      <div class="swatch-box" style="background:#FAFAF5; border-color:#C7C1B7;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Warm White</div>
+        <span class="swatch-hex">#FAFAF5</span>
+        <div class="swatch-usage">Page background</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Semantic Colours</h3>
+  <div class="semantic-row">
+    <div class="semantic-card" style="background:#E8F5EE;">
+      <div class="big-swatch" style="background:#52B788;"></div>
+      <div class="sem-label">Success</div>
+      <div class="sem-hex">#52B788 — Fern</div>
+    </div>
+    <div class="semantic-card" style="background:#fdf6e3;">
+      <div class="big-swatch" style="background:#D4A017;"></div>
+      <div class="sem-label">Warning</div>
+      <div class="sem-hex">#D4A017 — Amber</div>
+    </div>
+    <div class="semantic-card" style="background:#fdf0f0;">
+      <div class="big-swatch" style="background:#B33A3A;"></div>
+      <div class="sem-label">Error</div>
+      <div class="sem-hex">#B33A3A — Terracotta</div>
+    </div>
+    <div class="semantic-card" style="background:#edf5f4;">
+      <div class="big-swatch" style="background:#3D7A7A;"></div>
+      <div class="sem-label">Info</div>
+      <div class="sem-hex">#3D7A7A — Slate Teal</div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 5: Dark Mode + Typography -->
+<div class="page page-break">
+  <h2>Dark Mode</h2>
+  <p class="section-desc">Dark mode uses the deeper shades from each palette family. The key principle: <strong>darken by shifting into the palette's own dark end</strong>, not by inverting or adding grey.</p>
+
+  <div class="darkmode-grid">
+    <div class="mode-card light">
+      <h4>Light Mode</h4>
+      <div class="mode-item">
+        <div class="mode-swatch" style="background:#FAFAF5;"></div>
+        <div><div class="mode-label">Page background</div><div class="mode-mono">#FAFAF5</div></div>
+      </div>
+      <div class="mode-item">
+        <div class="mode-swatch" style="background:#E8E4DD;"></div>
+        <div><div class="mode-label">Surface / cards</div><div class="mode-mono">#E8E4DD</div></div>
+      </div>
+      <div class="mode-item">
+        <div class="mode-swatch" style="background:#1A1A18;"></div>
+        <div><div class="mode-label">Primary text</div><div class="mode-mono">#1A1A18</div></div>
+      </div>
+      <div class="mode-item">
+        <div class="mode-swatch" style="background:#8D8478;"></div>
+        <div><div class="mode-label">Muted text</div><div class="mode-mono">#8D8478</div></div>
+      </div>
+      <div class="mode-item">
+        <div class="mode-swatch" style="background:#2D6A4F;"></div>
+        <div><div class="mode-label">Primary accent</div><div class="mode-mono">#2D6A4F</div></div>
+      </div>
+      <div class="mode-item">
+        <div class="mode-swatch" style="background:#D4A017;"></div>
+        <div><div class="mode-label">Secondary accent</div><div class="mode-mono">#D4A017</div></div>
+      </div>
+    </div>
+
+    <div class="mode-card dark">
+      <h4>Dark Mode</h4>
+      <div class="mode-item">
+        <div class="mode-swatch" style="background:#1A1A18;"></div>
+        <div><div class="mode-label">Page background</div><div class="mode-mono">#1A1A18</div></div>
+      </div>
+      <div class="mode-item">
+        <div class="mode-swatch" style="background:#3D3D38;"></div>
+        <div><div class="mode-label">Surface / cards</div><div class="mode-mono">#3D3D38</div></div>
+      </div>
+      <div class="mode-item">
+        <div class="mode-swatch" style="background:#E8E4DD;"></div>
+        <div><div class="mode-label">Primary text</div><div class="mode-mono">#E8E4DD</div></div>
+      </div>
+      <div class="mode-item">
+        <div class="mode-swatch" style="background:#C7C1B7;"></div>
+        <div><div class="mode-label">Muted text</div><div class="mode-mono">#C7C1B7</div></div>
+      </div>
+      <div class="mode-item">
+        <div class="mode-swatch" style="background:#52B788;"></div>
+        <div><div class="mode-label">Primary accent</div><div class="mode-mono">#52B788</div></div>
+      </div>
+      <div class="mode-item">
+        <div class="mode-swatch" style="background:#F2CC8F;"></div>
+        <div><div class="mode-label">Secondary accent</div><div class="mode-mono">#F2CC8F</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 6: Typography -->
+<div class="page page-break">
+  <h2>Typography</h2>
+
+  <div class="type-specimen">
+    <div class="type-sample">
+      <div class="type-label">Headings — DM Sans Bold</div>
+      <div class="type-sample-heading" style="font-size:32px;">Sense Your World</div>
+    </div>
+    <div class="type-sample">
+      <div class="type-label">Body — Inter Regular</div>
+      <div class="type-sample-body" style="font-size:16px;">Your sensor measures six things about the air around you. All that data is open — forever. WeSense connects communities through transparent, permanent environmental data.</div>
+    </div>
+    <div class="type-sample">
+      <div class="type-label">Monospace / Data — JetBrains Mono</div>
+      <div class="type-sample-mono" style="font-size:14px;">PM2.5: 12.4 µg/m³ &nbsp; | &nbsp; CO₂: 418 ppm &nbsp; | &nbsp; Temp: 21.3°C</div>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Element</th><th>Font</th><th>Size</th><th>Weight</th><th>Line Height</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>H1</td><td>DM Sans</td><td>2.5rem (40px)</td><td>700</td><td>1.2</td></tr>
+      <tr><td>H2</td><td>DM Sans</td><td>2rem (32px)</td><td>700</td><td>1.25</td></tr>
+      <tr><td>H3</td><td>DM Sans</td><td>1.5rem (24px)</td><td>700</td><td>1.3</td></tr>
+      <tr><td>H4</td><td>DM Sans</td><td>1.25rem (20px)</td><td>600</td><td>1.35</td></tr>
+      <tr><td>Body</td><td>Inter</td><td>1rem (16px)</td><td>400</td><td>1.6</td></tr>
+      <tr><td>Caption</td><td>Inter</td><td>0.875rem (14px)</td><td>400</td><td>1.5</td></tr>
+      <tr><td>Data</td><td>JetBrains Mono</td><td>0.875rem (14px)</td><td>400</td><td>1.5</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- PAGE 7: Logo, Iconography, Tone, Quick Ref -->
+<div class="page page-break">
+  <h2>Logo &amp; Wordmark</h2>
+
+  <h3>Wordmark</h3>
+  <p class="section-desc">The "WeSense.earth" wordmark can be rendered in text using brand colours.</p>
+
+  <div class="wordmark-demo">
+    <div class="wordmark-box on-light">
+      <span style="color:#2D6A4F; font-weight:700;">WeSense</span><span style="color:#8D8478; font-weight:400;">.earth</span>
+    </div>
+    <div class="wordmark-box on-dark">
+      <span style="color:#52B788; font-weight:700;">WeSense</span><span style="color:#C7C1B7; font-weight:400;">.earth</span>
+    </div>
+  </div>
+
+  <h3>Logo Rules</h3>
+  <div class="icon-guidelines">
+    <div class="icon-guideline-card">
+      <strong>Minimum Size</strong>
+      32px height (digital) / 10mm (print)
+    </div>
+    <div class="icon-guideline-card">
+      <strong>Clear Space</strong>
+      Padding = height of ".earth" text on all sides
+    </div>
+    <div class="icon-guideline-card">
+      <strong>Backgrounds</strong>
+      Warm White (#FAFAF5) or Charcoal (#1A1A18) only
+    </div>
+  </div>
+
+  <h2 style="margin-top:32px;">Iconography</h2>
+  <div class="icon-guidelines">
+    <div class="icon-guideline-card">
+      <strong>Style</strong>
+      Line icons (not filled) — organic, hand-drawn feel
+    </div>
+    <div class="icon-guideline-card">
+      <strong>Stroke</strong>
+      1.5–2px weight at 24px icon size
+    </div>
+    <div class="icon-guideline-card">
+      <strong>Colour</strong>
+      Canopy #2D6A4F or Charcoal #1A1A18
+    </div>
+    <div class="icon-guideline-card">
+      <strong>Set</strong>
+      Lucide (lucide.dev) — open source
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 8: Tone of Voice -->
+<div class="page page-break">
+  <h2>Tone of Voice</h2>
+
+  <div class="tone-grid">
+    <div class="tone-card do">
+      <h4>Do</h4>
+      <ul>
+        <li>Speak plainly and directly</li>
+        <li>Say "we" — it's a community</li>
+        <li>Be specific: "PM2.5 readings" not "data"</li>
+        <li>Acknowledge complexity honestly</li>
+        <li>Use active voice</li>
+      </ul>
+    </div>
+    <div class="tone-card dont">
+      <h4>Don't</h4>
+      <ul>
+        <li>Use jargon or buzzwords</li>
+        <li>Say "our platform" or "the product"</li>
+        <li>Be vague or abstract</li>
+        <li>Oversimplify or overpromise</li>
+        <li>Use passive or corporate voice</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="background:#E8F5EE; border-radius:10px; padding:16px 20px; margin:12px 0 24px; font-size:13.5px;">
+    <strong style="color:#2D6A4F;">Yes:</strong> "Your sensor measures six things about the air around you. All that data is open — forever."<br>
+    <strong style="color:#B33A3A;">No:</strong> <span style="color:#8D8478;">"Our cutting-edge platform leverages IoT sensors to democratize environmental data."</span>
+  </div>
+
+
+</div>
+
+<!-- PAGE 8: Data Visualisation Scales — BOM 2013 Temperature -->
+<div class="page page-break">
+  <h2>Data Visualisation Scales</h2>
+  <p class="section-desc">Sensor data on the Respiro map uses scientific standard colour scales. These are separate from the brand palette and must never be modified.</p>
+
+  <div class="callout rule">
+    <strong>Rule: Neutral UI Near Data</strong><br>
+    When brand UI sits adjacent to data visualisation (map panels, legend containers, control cards), use the <strong>Neutral (Warm Stone) palette only</strong> — not the brand greens. This prevents the Canopy Green family from blending with the green temperature range (0–25°C). Legend swatch borders use Charcoal <code>#1A1A18</code> at 1px.
+  </div>
+
+  <h3 style="margin-top:24px;">Temperature — BOM 2013 Extended Scale</h3>
+  <p class="section-desc">Bureau of Meteorology 2013 Extended Color Scale. 28 stops from −80°C to +58°C.</p>
+
+  <div class="temp-strip-wrapper">
+    <!-- Left column: Hot side (+58 down to 20°C) -->
+    <div>
+      <div class="temp-col-label">Hot  +58°C → +20°C</div>
+      <div class="temp-strip">
+        <div class="temp-stop" style="background:#FFC0CB;"><span class="temp-range" style="color:#1A1A18;">&gt; 58°C</span><span class="temp-hex" style="color:#1A1A18;">#FFC0CB</span><span class="temp-name" style="color:#1A1A18;">Pale Pink</span></div>
+        <div class="temp-stop" style="background:#FF69B4;"><span class="temp-range" style="color:#1A1A18;">56 – 58°C</span><span class="temp-hex" style="color:#1A1A18;">#FF69B4</span><span class="temp-name" style="color:#1A1A18;">Hot Pink</span></div>
+        <div class="temp-stop" style="background:#FF1493;"><span class="temp-range" style="color:#FAFAF5;">54 – 56°C</span><span class="temp-hex" style="color:#FAFAF5;">#FF1493</span><span class="temp-name" style="color:#FAFAF5;">Deep Pink</span></div>
+        <div class="temp-stop" style="background:#FF00FF;"><span class="temp-range" style="color:#1A1A18;">52 – 54°C</span><span class="temp-hex" style="color:#1A1A18;">#FF00FF</span><span class="temp-name" style="color:#1A1A18;">Magenta</span></div>
+        <div class="temp-stop" style="background:#993399;"><span class="temp-range" style="color:#FAFAF5;">50 – 52°C</span><span class="temp-hex" style="color:#FAFAF5;">#993399</span><span class="temp-name" style="color:#FAFAF5;">Deep Purple</span></div>
+        <div class="temp-stop" style="background:#200000;"><span class="temp-range" style="color:#FAFAF5;">48 – 50°C</span><span class="temp-hex" style="color:#FAFAF5;">#200000</span><span class="temp-name" style="color:#FAFAF5;">Near Black</span></div>
+        <div class="temp-stop" style="background:#800000;"><span class="temp-range" style="color:#FAFAF5;">46 – 48°C</span><span class="temp-hex" style="color:#FAFAF5;">#800000</span><span class="temp-name" style="color:#FAFAF5;">Maroon</span></div>
+        <div class="temp-stop" style="background:#8B0000;"><span class="temp-range" style="color:#FAFAF5;">44 – 46°C</span><span class="temp-hex" style="color:#FAFAF5;">#8B0000</span><span class="temp-name" style="color:#FAFAF5;">Dark Red</span></div>
+        <div class="temp-stop" style="background:#FF0000;"><span class="temp-range" style="color:#FAFAF5;">42 – 44°C</span><span class="temp-hex" style="color:#FAFAF5;">#FF0000</span><span class="temp-name" style="color:#FAFAF5;">Bright Red</span></div>
+        <div class="temp-stop" style="background:#FF4500;"><span class="temp-range" style="color:#FAFAF5;">40 – 42°C</span><span class="temp-hex" style="color:#FAFAF5;">#FF4500</span><span class="temp-name" style="color:#FAFAF5;">Red-Orange</span></div>
+        <div class="temp-stop" style="background:#FF8C00;"><span class="temp-range" style="color:#1A1A18;">35 – 40°C</span><span class="temp-hex" style="color:#1A1A18;">#FF8C00</span><span class="temp-name" style="color:#1A1A18;">Dark Orange</span></div>
+        <div class="temp-stop" style="background:#FFA500;"><span class="temp-range" style="color:#1A1A18;">30 – 35°C</span><span class="temp-hex" style="color:#1A1A18;">#FFA500</span><span class="temp-name" style="color:#1A1A18;">Orange</span></div>
+        <div class="temp-stop" style="background:#FFD700;"><span class="temp-range" style="color:#1A1A18;">25 – 30°C</span><span class="temp-hex" style="color:#1A1A18;">#FFD700</span><span class="temp-name" style="color:#1A1A18;">Goldenrod</span></div>
+        <div class="temp-stop" style="background:#FFFF00;"><span class="temp-range" style="color:#1A1A18;">20 – 25°C</span><span class="temp-hex" style="color:#1A1A18;">#FFFF00</span><span class="temp-name" style="color:#1A1A18;">Yellow</span></div>
+      </div>
+    </div>
+    <!-- Right column: Cold side (+20 down to −80°C) -->
+    <div>
+      <div class="temp-col-label">Cold  +20°C → −80°C</div>
+      <div class="temp-strip">
+        <div class="temp-stop" style="background:#ADFF2F;"><span class="temp-range" style="color:#1A1A18;">15 – 20°C</span><span class="temp-hex" style="color:#1A1A18;">#ADFF2F</span><span class="temp-name" style="color:#1A1A18;">Chartreuse</span></div>
+        <div class="temp-stop" style="background:#32CD32;"><span class="temp-range" style="color:#1A1A18;">10 – 15°C</span><span class="temp-hex" style="color:#1A1A18;">#32CD32</span><span class="temp-name" style="color:#1A1A18;">Kelly Green</span></div>
+        <div class="temp-stop" style="background:#228B22;"><span class="temp-range" style="color:#FAFAF5;">5 – 10°C</span><span class="temp-hex" style="color:#FAFAF5;">#228B22</span><span class="temp-name" style="color:#FAFAF5;">Forest Green</span></div>
+        <div class="temp-stop" style="background:#006400;"><span class="temp-range" style="color:#FAFAF5;">0 – 5°C</span><span class="temp-hex" style="color:#FAFAF5;">#006400</span><span class="temp-name" style="color:#FAFAF5;">Dark Green</span></div>
+        <div class="temp-stop" style="background:#E0FFFF;"><span class="temp-range" style="color:#1A1A18;">−5 – 0°C</span><span class="temp-hex" style="color:#1A1A18;">#E0FFFF</span><span class="temp-name" style="color:#1A1A18;">Pale Aqua</span></div>
+        <div class="temp-stop" style="background:#87CEEB;"><span class="temp-range" style="color:#1A1A18;">−10 – −5°C</span><span class="temp-hex" style="color:#1A1A18;">#87CEEB</span><span class="temp-name" style="color:#1A1A18;">Sky Blue</span></div>
+        <div class="temp-stop" style="background:#00BFFF;"><span class="temp-range" style="color:#1A1A18;">−20 – −10°C</span><span class="temp-hex" style="color:#1A1A18;">#00BFFF</span><span class="temp-name" style="color:#1A1A18;">Cerulean</span></div>
+        <div class="temp-stop" style="background:#1E90FF;"><span class="temp-range" style="color:#FAFAF5;">−30 – −20°C</span><span class="temp-hex" style="color:#FAFAF5;">#1E90FF</span><span class="temp-name" style="color:#FAFAF5;">Cobalt Blue</span></div>
+        <div class="temp-stop" style="background:#0047AB;"><span class="temp-range" style="color:#FAFAF5;">−40 – −30°C</span><span class="temp-hex" style="color:#FAFAF5;">#0047AB</span><span class="temp-name" style="color:#FAFAF5;">Medium Blue</span></div>
+        <div class="temp-stop" style="background:#00008B;"><span class="temp-range" style="color:#FAFAF5;">−50 – −40°C</span><span class="temp-hex" style="color:#FAFAF5;">#00008B</span><span class="temp-name" style="color:#FAFAF5;">Dark Blue-Violet</span></div>
+        <div class="temp-stop" style="background:#4B0082;"><span class="temp-range" style="color:#FAFAF5;">−60 – −50°C</span><span class="temp-hex" style="color:#FAFAF5;">#4B0082</span><span class="temp-name" style="color:#FAFAF5;">Deep Indigo</span></div>
+        <div class="temp-stop" style="background:#6A5ACD;"><span class="temp-range" style="color:#FAFAF5;">−70 – −60°C</span><span class="temp-hex" style="color:#FAFAF5;">#6A5ACD</span><span class="temp-name" style="color:#FAFAF5;">Desaturated Violet</span></div>
+        <div class="temp-stop" style="background:#9FAEB5;"><span class="temp-range" style="color:#1A1A18;">−80 – −70°C</span><span class="temp-hex" style="color:#1A1A18;">#9FAEB5</span><span class="temp-name" style="color:#1A1A18;">Steel Grey</span></div>
+        <div class="temp-stop" style="background:#F2F2F2;"><span class="temp-range" style="color:#1A1A18;">≤ −80°C</span><span class="temp-hex" style="color:#1A1A18;">#F2F2F2</span><span class="temp-name" style="color:#1A1A18;">Ghost White</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 10: PM2.5, PM10, CO2 -->
+<div class="page page-break">
+  <h3 style="margin-top:0;">Other Metric Scales</h3>
+
+  <div class="metric-scales-grid">
+    <div class="metric-card">
+      <h4>PM2.5 — US EPA AQI (revised May 2024)</h4>
+      <p style="font-size:11px; color:#8D8478; margin:-4px 0 8px;">Official standard. Hex codes from AirNow API.</p>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#00E400;"></div><span class="metric-range-text">0–9.0</span><span class="metric-label">Good</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#FFFF00;"></div><span class="metric-range-text">9.1–35.4</span><span class="metric-label">Moderate</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#FF7E00;"></div><span class="metric-range-text">35.5–55.4</span><span class="metric-label">Unhealthy (sensitive)</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#FF0000;"></div><span class="metric-range-text">55.5–125.4</span><span class="metric-label">Unhealthy</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#8F3F97;"></div><span class="metric-range-text">125.5–225.4</span><span class="metric-label">Very Unhealthy</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#7E0023;"></div><span class="metric-range-text">225.5–325.4</span><span class="metric-label">Hazardous</span></div>
+    </div>
+
+    <div class="metric-card">
+      <h4>PM10 — US EPA AQI</h4>
+      <p style="font-size:11px; color:#8D8478; margin:-4px 0 8px;">Same colours, different breakpoints (µg/m³).</p>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#00E400;"></div><span class="metric-range-text">0–54</span><span class="metric-label">Good</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#FFFF00;"></div><span class="metric-range-text">55–154</span><span class="metric-label">Moderate</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#FF7E00;"></div><span class="metric-range-text">155–254</span><span class="metric-label">Unhealthy (sensitive)</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#FF0000;"></div><span class="metric-range-text">255–354</span><span class="metric-label">Unhealthy</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#8F3F97;"></div><span class="metric-range-text">355–424</span><span class="metric-label">Very Unhealthy</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#7E0023;"></div><span class="metric-range-text">425–604</span><span class="metric-label">Hazardous</span></div>
+    </div>
+
+    <div class="metric-card" style="grid-column: 1 / -1;">
+      <h4>CO&#x2082; (ppm) — De facto convention</h4>
+      <p style="font-size:11px; color:#8D8478; margin:-4px 0 8px;">No official standard. Consensus from WELL v2, RESET Air, ASHRAE, Aranet4 / German CO₂-Ampel. EPA AQI colours for consistency.</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <div class="metric-stop" style="flex:1;"><div class="metric-swatch" style="background:#00E400;"></div><span class="metric-range-text">&lt; 600</span><span class="metric-label">Excellent</span></div>
+        <div class="metric-stop" style="flex:1;"><div class="metric-swatch" style="background:#92D050;"></div><span class="metric-range-text">600–800</span><span class="metric-label">Good</span></div>
+        <div class="metric-stop" style="flex:1;"><div class="metric-swatch" style="background:#FFFF00;"></div><span class="metric-range-text">800–1000</span><span class="metric-label">Moderate</span></div>
+        <div class="metric-stop" style="flex:1;"><div class="metric-swatch" style="background:#FF7E00;"></div><span class="metric-range-text">1000–1400</span><span class="metric-label">Poor</span></div>
+        <div class="metric-stop" style="flex:1;"><div class="metric-swatch" style="background:#FF0000;"></div><span class="metric-range-text">1400–2000</span><span class="metric-label">Unhealthy</span></div>
+        <div class="metric-stop" style="flex:1;"><div class="metric-swatch" style="background:#8F3F97;"></div><span class="metric-range-text">&gt; 2000</span><span class="metric-label">Hazardous</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 11: Humidity, Pressure -->
+<div class="page page-break">
+  <div class="metric-scales-grid">
+    <div class="metric-card">
+      <h4>Humidity (%) — No formal standard</h4>
+      <p style="font-size:11px; color:#8D8478; margin:-4px 0 8px;">Convention: dry = warm/brown, wet = cool/blue. Based on Windy.com / NOAA NDFD pattern.</p>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#C8420D;"></div><span class="metric-range-text">&lt; 20%</span><span class="metric-label">Extremely dry</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#C2863E;"></div><span class="metric-range-text">20–35%</span><span class="metric-label">Dry</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#69AD38;"></div><span class="metric-range-text">35–50%</span><span class="metric-label">Moderately dry</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#38AEAD;"></div><span class="metric-range-text">50–65%</span><span class="metric-label">Comfortable</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#389DAD;"></div><span class="metric-range-text">65–80%</span><span class="metric-label">Humid</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#384672;"></div><span class="metric-range-text">80–100%</span><span class="metric-label">Very humid / saturated</span></div>
+    </div>
+
+    <div class="metric-card">
+      <h4>Pressure (hPa) — No formal standard</h4>
+      <p style="font-size:11px; color:#8D8478; margin:-4px 0 8px;">Convention: low = blue/cool, high = red/warm, centred on ~1013 hPa. Based on OpenWeatherMap.</p>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#0073FF;"></div><span class="metric-range-text">&lt; 960</span><span class="metric-label">Very deep low</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#00AAFF;"></div><span class="metric-range-text">960–980</span><span class="metric-label">Deep low</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#4BD0D6;"></div><span class="metric-range-text">980–1000</span><span class="metric-label">Moderate low</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#8DE7C7;"></div><span class="metric-range-text">1000–1013</span><span class="metric-label">Near standard</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#B0F720;"></div><span class="metric-range-text">1013–1020</span><span class="metric-label">Weak high</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#F0B800;"></div><span class="metric-range-text">1020–1040</span><span class="metric-label">High pressure</span></div>
+      <div class="metric-stop"><div class="metric-swatch" style="background:#FB5515;"></div><span class="metric-range-text">&gt; 1040</span><span class="metric-label">Very high</span></div>
+    </div>
+  </div>
+
+  <div class="callout source">
+    <strong>Source of truth:</strong> All scale definitions live in <code>wesense-respiro/public/app.js</code>. Any changes must be made there first. The scales above should be implemented to replace the existing ad-hoc values.
+  </div>
+
+</div>
+
+<!-- PAGE: Quick Reference -->
+<div class="page page-break">
+  <div class="quick-ref">
+    <h3>Quick Reference</h3>
+    <table>
+      <tbody>
+        <tr><td>Primary colour</td><td><span class="inline-swatch" style="background:#2D6A4F;"></span> <span class="swatch-hex">#2D6A4F</span> Canopy</td></tr>
+        <tr><td>Secondary colour</td><td><span class="inline-swatch" style="background:#D4A017;"></span> <span class="swatch-hex">#D4A017</span> Amber</td></tr>
+        <tr><td>Tertiary colour</td><td><span class="inline-swatch" style="background:#3D7A7A;"></span> <span class="swatch-hex">#3D7A7A</span> Slate Teal</td></tr>
+        <tr><td>Body text</td><td><span class="inline-swatch" style="background:#1A1A18;"></span> <span class="swatch-hex">#1A1A18</span> Charcoal</td></tr>
+        <tr><td>Background</td><td><span class="inline-swatch" style="background:#FAFAF5; border-color:#C7C1B7;"></span> <span class="swatch-hex">#FAFAF5</span> Warm White</td></tr>
+        <tr><td>Heading font</td><td>DM Sans Bold</td></tr>
+        <tr><td>Body font</td><td>Inter Regular</td></tr>
+        <tr><td>Mono font</td><td>JetBrains Mono</td></tr>
+        <tr><td>Border radius</td><td>8px (cards) / 4px (buttons, inputs)</td></tr>
+        <tr><td>Tagline</td><td>Sense Your World. Share Our Planet.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>
